@@ -1,0 +1,38 @@
+.mat-root { background:var(--bg-0); min-height:100dvh; }
+.mat-topbar { padding:20px 16px 14px; background:var(--bg-1); border-bottom:1px solid var(--b-1); position:sticky; top:0; z-index:50; }
+.mat-title { font-size:1.5rem; font-weight:800; }
+.mat-sub   { font-size:0.78rem; color:var(--t-3); margin-top:2px; }
+
+.mat-empty { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:60dvh; text-align:center; gap:10px; padding:24px; }
+.mat-empty h3 { font-size:1.2rem; }
+.mat-empty p  { color:var(--t-3); max-width:260px; line-height:1.5; }
+
+.mat-section { padding:18px 16px 10px; }
+
+.avatar-row { display:flex; gap:14px; overflow-x:auto; padding-bottom:4px; -ms-overflow-style:none; scrollbar-width:none; }
+.avatar-row::-webkit-scrollbar { display:none; }
+
+.av-item { display:flex; flex-direction:column; align-items:center; gap:5px; flex-shrink:0; cursor:pointer; }
+.av-ring { width:64px; height:64px; border-radius:50%; padding:2px; background:linear-gradient(135deg,var(--orange),#f55); box-shadow:0 0 12px var(--orange-glow); }
+.av-img  { width:100%; height:100%; border-radius:50%; object-fit:cover; border:2.5px solid var(--bg-0); display:block; }
+.av-name { font-size:0.72rem; font-weight:700; text-align:center; }
+.av-sport{ font-size:0.9rem; }
+
+.chat-list { display:flex; flex-direction:column; gap:2px; }
+
+.chat-item { display:flex; gap:12px; padding:13px 0; border-bottom:1px solid var(--b-1); align-items:center; cursor:pointer; transition:all var(--t-smooth); }
+.chat-item:hover { padding-left:6px; }
+.chat-item:last-child { border-bottom:none; }
+
+.ci-avatar-wrap { position:relative; width:50px; height:50px; flex-shrink:0; }
+.ci-avatar { width:50px; height:50px; border-radius:50%; object-fit:cover; border:2px solid var(--b-1); }
+.ci-dot { position:absolute; bottom:1px; right:1px; width:10px; height:10px; border:2px solid var(--bg-0); border-radius:50%; }
+
+.ci-info { flex:1; min-width:0; }
+.ci-top  { display:flex; justify-content:space-between; margin-bottom:3px; }
+.ci-name { font-size:0.92rem; font-weight:700; }
+.ci-time { font-size:0.7rem; color:var(--t-4); }
+.ci-preview { font-size:0.82rem; color:var(--t-3); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:5px; }
+.ci-meta { display:flex; align-items:center; gap:8px; }
+.ci-loc  { font-size:0.72rem; color:var(--t-4); display:flex; align-items:center; gap:3px; }
+.ci-msg-icon { color:var(--orange); flex-shrink:0; }

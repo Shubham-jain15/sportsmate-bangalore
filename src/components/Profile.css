@@ -1,0 +1,45 @@
+.prof-root { background:var(--bg-0); min-height:100dvh; }
+
+.prof-hero { position:relative; overflow:hidden; padding-bottom:20px; }
+.prof-hero-bg { position:absolute; inset:0; background:radial-gradient(ellipse 120% 100% at 50% 0%,var(--clr,var(--orange)) 0%,transparent 65%); opacity:0.12; pointer-events:none; }
+
+.prof-topbar { display:flex; justify-content:flex-end; padding:16px 16px 0; position:relative; z-index:1; }
+.edit-btn { padding:8px 14px; font-size:0.78rem; border-radius:var(--r-full); }
+
+.prof-avatar-section { display:flex; align-items:center; gap:16px; padding:12px 16px 0; position:relative; z-index:1; }
+.prof-av-wrap { position:relative; flex-shrink:0; }
+.prof-av { width:88px; height:88px; border-radius:50%; object-fit:cover; border:3px solid var(--clr,var(--orange)); box-shadow:0 0 0 4px rgba(0,0,0,0.5), 0 0 16px var(--clr,var(--orange)); display:block; }
+.online-badge-hero { position:absolute; bottom:3px; right:3px; width:14px; height:14px; border-radius:50%; background:var(--green); border:3px solid var(--bg-0); }
+
+.prof-name-info { display:flex; flex-direction:column; gap:5px; }
+.prof-name { font-size:1.3rem; font-weight:800; }
+.prof-loc  { font-size:0.8rem; color:var(--t-3); display:flex; align-items:center; gap:4px; }
+.skill-badge { display:inline-block; padding:4px 14px; border-radius:var(--r-full); font-size:0.75rem; font-weight:800; }
+
+/* Stats */
+.prof-stats-bar { display:flex; background:var(--bg-1); border-top:1px solid var(--b-1); border-bottom:1px solid var(--b-1); padding:14px 0; }
+.psb-block { flex:1; display:flex; flex-direction:column; align-items:center; gap:3px; }
+.psb-val   { font-size:1.1rem; font-weight:800; color:var(--orange); }
+.psb-lbl   { font-size:0.63rem; color:var(--t-3); text-transform:uppercase; letter-spacing:0.04em; }
+.psb-div   { width:1px; background:var(--b-1); }
+
+.prof-section { padding:18px 16px 10px; }
+
+/* Sports tags */
+.sport-tags-wrap { display:flex; flex-wrap:wrap; gap:8px; }
+.sport-tag-big { display:inline-flex; align-items:center; gap:6px; padding:9px 14px; border-radius:var(--r-md); background:var(--orange-dim); border:1.5px solid var(--orange); color:var(--t-1); font-size:0.85rem; font-weight:700; position:relative; }
+.sport-tag-big { background: rgba(var(--stc-r,252),var(--stc-g,128),var(--stc-b,25),0.1); border-color:rgba(var(--stc-r,252),var(--stc-g,128),var(--stc-b,25),0.3); }
+.primary-dot { width:7px; height:7px; border-radius:50%; background:var(--orange); box-shadow:0 0 6px var(--orange); }
+
+.prof-bio { font-size:0.9rem; color:var(--t-2); line-height:1.6; }
+
+/* Achievements */
+.badges-grid { display:flex; flex-wrap:wrap; gap:8px; }
+.achiev-card { display:flex; align-items:center; gap:7px; padding:10px 13px; background:var(--bg-2); border:1px solid var(--b-1); border-radius:10px; font-size:0.83rem; font-weight:600; }
+
+.info-row { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid var(--b-1); font-size:0.88rem; color:var(--t-2); }
+.info-row:last-child { border-bottom:none; }
+.ir-icon { color:var(--t-4); flex-shrink:0; }
+
+.logout-btn { display:flex; align-items:center; justify-content:center; gap:8px; margin:16px; width:calc(100% - 32px); padding:13px; background:var(--red-dim); border:1px solid rgba(244,67,54,0.25); border-radius:var(--r-md); color:var(--red); font-size:0.9rem; font-weight:700; cursor:pointer; font-family:inherit; transition:all var(--t-smooth); }
+.logout-btn:hover { background:rgba(244,67,54,0.2); }

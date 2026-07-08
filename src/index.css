@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Swiggy-inspired palette */
+  --orange:        #FC8019;
+  --orange-dark:   #E16B0A;
+  --orange-dim:    rgba(252, 128, 25, 0.12);
+  --orange-glow:   rgba(252, 128, 25, 0.25);
+
+  --green:         #60B246;
+  --green-dim:     rgba(96, 178, 70, 0.12);
+  --red:           #F44336;
+  --red-dim:       rgba(244, 67, 54, 0.12);
+  --blue:          #4F90F7;
+  --blue-dim:      rgba(79, 144, 247, 0.12);
+  --purple:        #9B59B6;
+  --purple-dim:    rgba(155, 89, 182, 0.12);
+  --yellow:        #F1C40F;
+  --cyan:          #00BCD4;
+
+  /* Backgrounds */
+  --bg-0:  #0A0A0A;
+  --bg-1:  #111111;
+  --bg-2:  #181818;
+  --bg-3:  #222222;
+  --bg-card: #1C1C1C;
+
+  /* Text */
+  --t-1: #FFFFFF;
+  --t-2: #CCCCCC;
+  --t-3: #888888;
+  --t-4: #555555;
+
+  /* Borders */
+  --b-1: rgba(255,255,255,0.08);
+  --b-2: rgba(255,255,255,0.14);
+
+  /* Radii */
+  --r-sm:   8px;
+  --r-md:   14px;
+  --r-lg:   20px;
+  --r-xl:   28px;
+  --r-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md:  0 4px 20px rgba(0,0,0,0.5);
+  --shadow-lg:  0 8px 40px rgba(0,0,0,0.6);
+  --shadow-orange: 0 4px 20px rgba(252,128,25,0.35);
+
+  /* Transitions */
+  --t-fast:   0.15s ease;
+  --t-smooth: 0.25s cubic-bezier(0.4,0,0.2,1);
+  --t-spring: 0.4s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  background: var(--bg-0);
+  color: var(--t-1);
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 0; height: 0; }
+
+/* ─── Typography ─── */
+h1,h2,h3,h4 { font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+
+/* ─── Buttons ─── */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  border: none; cursor: pointer; font-family: inherit; font-weight: 700;
+  border-radius: var(--r-full); transition: all var(--t-smooth); white-space: nowrap;
+  text-decoration: none; font-size: 0.9rem;
+}
+.btn:active { transform: scale(0.96); }
+
+.btn-orange {
+  background: var(--orange); color: #fff; padding: 13px 24px;
+  box-shadow: var(--shadow-orange);
+}
+.btn-orange:hover { background: var(--orange-dark); box-shadow: 0 6px 28px rgba(252,128,25,0.5); transform: translateY(-1px); }
+
+.btn-ghost {
+  background: var(--bg-3); color: var(--t-2); padding: 11px 20px;
+  border: 1px solid var(--b-1);
+}
+.btn-ghost:hover { background: var(--bg-2); border-color: var(--b-2); }
+
+.btn-outline-orange {
+  background: transparent; color: var(--orange); padding: 11px 20px;
+  border: 1.5px solid var(--orange);
+}
+.btn-outline-orange:hover { background: var(--orange-dim); }
+
+/* ─── Input ─── */
+.input-wrap { position: relative; }
+.input-wrap .icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--t-3); pointer-events: none; transition: color var(--t-fast); }
+.input-wrap:focus-within .icon { color: var(--orange); }
+
+.inp {
+  width: 100%; background: var(--bg-3); border: 1.5px solid var(--b-1);
+  color: var(--t-1); padding: 14px 14px 14px 44px;
+  border-radius: var(--r-md); font-size: 0.95rem; font-family: inherit;
+  transition: all var(--t-smooth);
+}
+.inp:focus { outline: none; border-color: var(--orange); background: rgba(252,128,25,0.05); box-shadow: 0 0 0 3px var(--orange-dim); }
+.inp::placeholder { color: var(--t-4); }
+
+/* ─── Section header ─── */
+.sec-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.sec-title { font-size: 1rem; font-weight: 700; }
+.sec-link  { font-size: 0.82rem; color: var(--orange); font-weight: 600; cursor: pointer; }
+
+/* ─── Pill/Badge ─── */
+.pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 11px; border-radius: var(--r-full);
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase;
+}
+.pill-orange { background: var(--orange-dim); color: var(--orange); }
+.pill-green  { background: var(--green-dim);  color: var(--green); }
+.pill-red    { background: var(--red-dim);    color: var(--red); }
+.pill-blue   { background: var(--blue-dim);   color: var(--blue); }
+.pill-purple { background: var(--purple-dim); color: var(--purple); }
+
+/* ─── Star rating ─── */
+.stars { display: flex; align-items: center; gap: 3px; font-size: 0.8rem; color: var(--yellow); font-weight: 700; }
+.stars span { color: var(--t-3); font-weight: 400; }
+
+/* ─── Divider ─── */
+.divider { height: 8px; background: var(--bg-1); margin: 0 -16px; }
+
+/* ─── Card ─── */
+.card {
+  background: var(--bg-card); border: 1px solid var(--b-1);
+  border-radius: var(--r-lg); overflow: hidden;
+  transition: all var(--t-smooth);
+}
+.card:hover { border-color: var(--b-2); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+/* ─── Online dot ─── */
+.dot-online { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); flex-shrink: 0; }
+.dot-offline { width: 8px; height: 8px; border-radius: 50%; background: var(--t-4); flex-shrink: 0; }
+
+/* ─── Spinner ─── */
+.spinner { display: inline-block; width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.2); border-top-color: #fff; border-radius: 50%; animation: spin 0.7s linear infinite; }
+
+/* ─── Animations ─── */
+@keyframes spin       { to { transform: rotate(360deg); } }
+@keyframes slideUp    { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: translateY(0); } }
+@keyframes fadeIn     { from { opacity:0; } to { opacity:1; } }
+@keyframes pop        { 0%,100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+@keyframes slideDown  { from { opacity:0; transform: translateY(-16px); } to { opacity:1; transform: translateY(0); } }
+@keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 var(--orange-glow); } 70% { box-shadow: 0 0 0 10px transparent; } 100% { box-shadow: 0 0 0 0 transparent; } }
+
+.anim-up   { animation: slideUp 0.4s cubic-bezier(0.34,1.2,0.64,1) both; }
+.anim-fade { animation: fadeIn 0.3s ease both; }
+.anim-pop  { animation: pop 0.35s var(--t-spring) both; }
+.d1 { animation-delay: 0.05s; } .d2 { animation-delay: 0.1s; }
+.d3 { animation-delay: 0.15s; } .d4 { animation-delay: 0.2s; }
+.d5 { animation-delay: 0.25s; }

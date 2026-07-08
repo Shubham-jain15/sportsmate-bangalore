@@ -1,0 +1,45 @@
+.sess-root { background:var(--bg-0); min-height:100dvh; }
+
+.sess-topbar { display:flex; justify-content:space-between; align-items:flex-start; padding:16px 16px 12px; background:var(--bg-1); border-bottom:1px solid var(--b-1); position:sticky; top:0; z-index:50; }
+.sess-title { font-size:1.5rem; font-weight:800; }
+.sess-sub   { font-size:0.78rem; color:var(--t-3); margin-top:2px; }
+.create-btn { padding:9px 16px; font-size:0.83rem; }
+
+.sess-filters { display:flex; gap:8px; overflow-x:auto; padding:12px 16px; -ms-overflow-style:none; scrollbar-width:none; border-bottom:1px solid var(--b-1); }
+.sess-filters::-webkit-scrollbar { display:none; }
+
+/* Reuse sport-pill from Discovery */
+.sport-pill { flex-shrink:0; padding:7px 14px; border-radius:var(--r-full); background:var(--bg-2); border:1.5px solid var(--b-1); color:var(--t-2); font-size:0.78rem; font-weight:600; cursor:pointer; font-family:inherit; transition:all var(--t-smooth); white-space:nowrap; }
+.sport-pill.active { background:var(--orange-dim); border-color:var(--orange); color:var(--orange); }
+
+.sess-list { display:flex; flex-direction:column; gap:14px; padding:16px; }
+
+.sess-card { background:var(--bg-card); border:1px solid var(--b-1); border-radius:var(--r-lg); overflow:hidden; transition:all var(--t-smooth); }
+.sess-card:hover { border-color:var(--b-2); box-shadow:var(--shadow-md); }
+
+.sess-card-header { display:flex; justify-content:space-between; align-items:center; padding:14px; gap:10px; }
+.sch-left { display:flex; align-items:center; gap:10px; min-width:0; }
+.sch-emoji { font-size:1.8rem; flex-shrink:0; }
+.sess-card-title { font-size:0.93rem; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:180px; }
+.sess-host { font-size:0.72rem; color:var(--t-3); }
+.host-avatar { width:40px; height:40px; border-radius:50%; object-fit:cover; border:2px solid var(--b-2); flex-shrink:0; }
+
+.sess-card-body { padding:12px 14px; display:flex; flex-direction:column; gap:10px; }
+
+.scb-row { display:flex; gap:8px; flex-wrap:wrap; }
+.scb-chip { display:flex; align-items:center; gap:5px; font-size:0.78rem; color:var(--t-2); background:var(--bg-3); padding:5px 10px; border-radius:8px; }
+
+.spots-section { display:flex; flex-direction:column; gap:6px; }
+.spots-label { display:flex; justify-content:space-between; font-size:0.76rem; }
+.text-green { color:var(--green); font-weight:600; }
+.text-red   { color:var(--red);   font-weight:600; }
+
+.spots-bar { height:6px; background:var(--bg-3); border-radius:3px; overflow:hidden; }
+.spots-fill { height:100%; border-radius:3px; transition:width 0.6s ease; }
+
+.scb-footer { display:flex; justify-content:space-between; align-items:center; }
+.sess-fee { font-size:1rem; font-weight:800; color:var(--orange); }
+.sess-per-head { font-size:0.72rem; color:var(--t-3); margin-left:4px; }
+.sess-join-btn { padding:10px 20px !important; font-size:0.82rem !important; }
+
+.sess-empty { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:60px 24px; text-align:center; gap:10px; color:var(--t-3); }
